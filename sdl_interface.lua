@@ -2,7 +2,7 @@
 
 ffi = ffi or require 'ffi'
 
-local sdl = ffi.load('C:/Users/lmilhau/Documents/Divers/engine.cpp/lib/sdl/lib/SDL2.dll')
+local sdl = ffi.load('SDL2.dll')
 ffi.cdef[[
     typedef int8_t Sint8;
     typedef uint8_t Uint8;

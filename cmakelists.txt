@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.5)
+project(engine VERSION 0.1.0 LANGUAGES C CXX)
+
+include(CTest)
+enable_testing()
+
+add_executable(engine main.cpp)
+
+include_directories(${PROJECT_SOURCE_DIR}/luajit/src)
+include_directories(${PROJECT_SOURCE_DIR}/sdl/include)
+
+target_link_libraries(engine ${PROJECT_SOURCE_DIR}/luajit/src/lua51.dll)
+target_link_libraries(engine ${PROJECT_SOURCE_DIR}/sdl/build/sdl2.dll)
+target_link_libraries(engine libwinmm.a)
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)

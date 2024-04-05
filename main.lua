@@ -1,7 +1,9 @@
-if arg[#arg] == "vsc_debug" then
+if arg and arg[#arg] == "vsc_debug" then
     local lldebugger = require "lldebugger"
     lldebugger.start()
 end
+
+print(_VERSION)
 
 require 'ffi'
 sdl = require 'sdl_interface'
