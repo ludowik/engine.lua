@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include <windows.h>
+//#include <windows.h>
 #include <SDL.h>
 
 extern "C" {
@@ -11,9 +11,8 @@ extern "C" {
     #include <luajit.h>
 };
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
-    PSTR lpCmdLine, int nCmdShow) {
-// int main(int argc, char* argv[]) {
+//int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR lpCmdLine, int nCmdShow) {
+int main(int argc, char* argv[]) {
     int status;
     lua_State *L;
 
