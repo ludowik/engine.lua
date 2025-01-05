@@ -1,15 +1,10 @@
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-//#include <windows.h>
-#include <SDL.h>
+#include <SDL3/SDL.h>
 
-extern "C" {
-    #include <stdio.h>
-    #include <lua.h>
-    #include <lualib.h>
-    #include <lauxlib.h>
-    #include <luajit.h>
-};
+#include <lua/lua.hpp>
 
 //int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR lpCmdLine, int nCmdShow) {
 int main(int argc, char* argv[]) {
@@ -25,8 +20,7 @@ int main(int argc, char* argv[]) {
     luaL_openlibs(L); // load Lua libraries
     // if (argc > 1)
     {
-        //status = luaL_loadfile(L, "/Users/Ludo/Dev/engine/main.lua"); // argv[1]); // load Lua script
-        _wchdir(L"C:/Users/lmilhau/Documents/Divers/engine.lua");
+        chdir("/Users/lca/Dev/engine.lua");
         status = luaL_loadfile(L, "main.lua"); // argv[1]); // load Lua script
         
         if (status)
